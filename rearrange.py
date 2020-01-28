@@ -1,7 +1,10 @@
 from random import shuffle
 from sys import argv
 
-if __name__ == "__main__":
+def rearrange_args():
     args = argv[1:]
     shuffle(args)
     print(" ".join(args))
+
+if __name__ == "__main__":
+    rearrange_args()
