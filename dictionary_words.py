@@ -1,4 +1,4 @@
-from random import choice
+from random import randrange
 from sys import argv
 
 def random_words():
@@ -6,7 +6,7 @@ def random_words():
     num_words = int(argv[1])
     with open(word_dict, 'r') as file:
         words = file.readlines()
-        random_words = [choice(words).rstrip() for _ in range(num_words)]
+        random_words = [words[randrange(0, len(words))].rstrip() for _ in range(num_words)]
         print(' '.join(random_words) + '.')
 
 if __name__ == "__main__":
